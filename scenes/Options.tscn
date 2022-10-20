@@ -1,0 +1,203 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://sprites/erasealldata.png" type="Texture" id=1]
+[ext_resource path="res://sprites/newexitbutonFUCKYOUASEPRITE.png" type="Texture" id=2]
+[ext_resource path="res://scripts/OptionsManager.gd" type="Script" id=3]
+[ext_resource path="res://sprites/erasealldataSelected.png" type="Texture" id=4]
+[ext_resource path="res://sprites/goobles/GoobIcon1.png" type="Texture" id=5]
+[ext_resource path="res://sprites/goobles/GoobIcon2.png" type="Texture" id=6]
+[ext_resource path="res://sprites/goobles/GoobIcon3.png" type="Texture" id=7]
+[ext_resource path="res://sprites/goobles/GoobIcon4.png" type="Texture" id=8]
+[ext_resource path="res://counterUI.tres" type="DynamicFont" id=9]
+[ext_resource path="res://sprites/goobles/GoobIcon5.png" type="Texture" id=10]
+[ext_resource path="res://sprites/goobles/GoobIcon6.png" type="Texture" id=11]
+[ext_resource path="res://PLACEHOLDERIMAGE.png" type="Texture" id=12]
+[ext_resource path="res://sprites/goobles/GoobIcon3007.png" type="Texture" id=13]
+[ext_resource path="res://scenes/Fader.tscn" type="PackedScene" id=14]
+[ext_resource path="res://storeUI.tres" type="DynamicFont" id=15]
+[ext_resource path="res://sprites/lock.png" type="Texture" id=16]
+[ext_resource path="res://sprites/updatealldata.png" type="Texture" id=17]
+[ext_resource path="res://Symtext.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://sprites/musicbox.png" type="Texture" id=19]
+[ext_resource path="res://sprites/newexitbutonFUCKYOUASEPRITE.se;lect.png" type="Texture" id=20]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 18 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 184.25, 48.5 )
+
+[node name="Options" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = -25.0
+margin_top = -13.0
+margin_right = 1056.0
+margin_bottom = 634.0
+mouse_filter = 2
+color = Color( 0.117647, 0.117647, 0.117647, 1 )
+
+[node name="Erase" type="TextureButton" parent="."]
+margin_left = 773.0
+margin_top = 495.0
+margin_right = 1011.0
+margin_bottom = 585.0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="exit" type="TextureButton" parent="."]
+margin_left = 5.0
+margin_top = 4.0
+margin_right = 79.0
+margin_bottom = 78.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 20 )
+expand = true
+
+[node name="Goob1" type="TextureButton" parent="."]
+margin_left = 145.0
+margin_top = 178.0
+margin_right = 300.0
+margin_bottom = 333.0
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="Goob2" type="TextureButton" parent="."]
+margin_left = 344.0
+margin_top = 183.0
+margin_right = 499.0
+margin_bottom = 338.0
+texture_normal = ExtResource( 6 )
+expand = true
+
+[node name="Goob3" type="TextureButton" parent="."]
+margin_left = 534.0
+margin_top = 185.0
+margin_right = 689.0
+margin_bottom = 340.0
+texture_normal = ExtResource( 7 )
+expand = true
+
+[node name="Goob4" type="TextureButton" parent="."]
+margin_left = 717.0
+margin_top = 190.0
+margin_right = 872.0
+margin_bottom = 345.0
+texture_normal = ExtResource( 8 )
+expand = true
+
+[node name="Goob5" type="TextureButton" parent="."]
+margin_left = 145.0
+margin_top = 336.0
+margin_right = 300.0
+margin_bottom = 491.0
+texture_normal = ExtResource( 10 )
+expand = true
+
+[node name="Goob6" type="TextureButton" parent="."]
+margin_left = 344.0
+margin_top = 336.0
+margin_right = 499.0
+margin_bottom = 491.0
+texture_normal = ExtResource( 11 )
+expand = true
+
+[node name="Goob400" type="TextureButton" parent="."]
+margin_left = 1129.0
+margin_top = 210.0
+margin_right = 1262.0
+margin_bottom = 345.0
+texture_normal = ExtResource( 12 )
+expand = true
+
+[node name="Goob3007" type="TextureButton" parent="."]
+margin_left = 6.0
+margin_top = 474.0
+margin_right = 128.0
+margin_bottom = 596.0
+theme = SubResource( 1 )
+texture_normal = ExtResource( 13 )
+expand = true
+
+[node name="Lock" type="Sprite" parent="Goob3007"]
+position = Vector2( 59, 75 )
+scale = Vector2( 3.59375, 3.59375 )
+texture = ExtResource( 16 )
+
+[node name="GetGoobs" type="Label" parent="Goob3007"]
+margin_left = 16.0
+margin_top = 80.0
+margin_right = 269.0
+margin_bottom = 104.0
+custom_fonts/font = ExtResource( 15 )
+text = "get one million goobs"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 411.0
+margin_top = 80.0
+margin_right = 622.0
+margin_bottom = 125.0
+custom_fonts/font = ExtResource( 9 )
+text = "cat type: 1"
+
+[node name="Fader" parent="." instance=ExtResource( 14 )]
+position = Vector2( -13, -11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Update" type="TextureButton" parent="."]
+margin_left = 758.0
+margin_top = 12.0
+margin_right = 1014.0
+margin_bottom = 45.0
+mouse_filter = 1
+texture_normal = ExtResource( 17 )
+expand = true
+
+[node name="Label" type="Label" parent="Update"]
+margin_left = -95.0
+margin_top = 28.0
+margin_right = 256.0
+margin_bottom = 66.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "may erase newer data"
+
+[node name="Area2D" type="Area2D" parent="Update"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Update/Area2D"]
+position = Vector2( 89.25, 32.5 )
+shape = SubResource( 3 )
+
+[node name="Music" type="CheckButton" parent="."]
+margin_left = 327.0
+margin_top = 525.0
+margin_right = 452.0
+margin_bottom = 585.0
+custom_fonts/font = ExtResource( 9 )
+icon = ExtResource( 19 )
+expand_icon = true
+
+[connection signal="button_up" from="Erase" to="." method="_on_Erase_button_up"]
+[connection signal="button_up" from="exit" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="exit" to="Fader" method="_on_exit_button_up"]
+[connection signal="button_up" from="Goob1" to="." method="_on_Goob1_button_up"]
+[connection signal="button_up" from="Goob2" to="." method="_on_Goob2_button_up"]
+[connection signal="button_up" from="Goob3" to="." method="_on_Goob3_button_up"]
+[connection signal="button_up" from="Goob4" to="." method="_on_Goob4_button_up"]
+[connection signal="button_up" from="Goob5" to="." method="_on_Goob5_button_up"]
+[connection signal="button_up" from="Goob6" to="." method="_on_Goob6_button_up"]
+[connection signal="button_up" from="Goob400" to="." method="_on_Goob400_button_up"]
+[connection signal="button_up" from="Goob3007" to="." method="_on_Goob3007_button_up"]
+[connection signal="button_up" from="Update" to="." method="_on_Update_button_up"]
+[connection signal="mouse_entered" from="Update/Area2D" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="Update/Area2D" to="." method="_on_Area2D_mouse_exited"]
+[connection signal="toggled" from="Music" to="." method="_on_Music_toggled"]
