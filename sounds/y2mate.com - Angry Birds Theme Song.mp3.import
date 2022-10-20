@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/y2mate.com - Angry Birds Theme Song.mp3-6d54bd2229cdb57be73ee3d2cdc80235.mp3str"
+
+[deps]
+
+source_file="res://sounds/y2mate.com - Angry Birds Theme Song.mp3"
+dest_files=[ "res://.import/y2mate.com - Angry Birds Theme Song.mp3-6d54bd2229cdb57be73ee3d2cdc80235.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
